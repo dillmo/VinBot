@@ -1,0 +1,264 @@
+<?xml version="1.0" ?>
+<enemy>
+    <behaviour>
+        <root x="110" y="40">
+            <normal>
+                <condition id="isInNamedArea">
+                    <string id="area name">HEALAREA</string>
+                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                    <string id="who" values="targetself">self</string>
+                    <string id="Comment">Am I in shop?</string>
+                    <normal>
+                        <condition id="isUpgradeEnabled">
+                            <string id="condition" values="yesno">no</string>
+                            <string id="upgrade name">PiggyBank</string>
+                            <normal>
+                                <condition id="canPayUpgrade">
+                                    <string id="upgrade name">PiggyBank</string>
+                                    <normal>
+                                        <action id="buyUpgrade">
+                                            <string id="upgrade name">PiggyBank</string>
+                                        </action>
+                                    </normal>
+                                </condition>
+                            </normal>
+                            <else>
+                                <condition id="isUpgradeEnabled">
+                                    <string id="condition" values="yesno">no</string>
+                                    <string id="upgrade name">BirdSmoke</string>
+                                    <normal>
+                                        <condition id="canPayUpgrade">
+                                            <string id="upgrade name">BirdSmoke</string>
+                                            <normal>
+                                                <action id="buyUpgrade">
+                                                    <string id="upgrade name">BirdSmoke</string>
+                                                </action>
+                                            </normal>
+                                        </condition>
+                                    </normal>
+                                    <else>
+                                        <condition id="isUpgradeEnabled">
+                                            <string id="condition" values="yesno">no</string>
+                                            <string id="upgrade name">BirdSmokeSteal</string>
+                                            <normal>
+                                                <condition id="canPayUpgrade">
+                                                    <string id="upgrade name">BirdSmokeSteal</string>
+                                                    <normal>
+                                                        <action id="buyUpgrade">
+                                                            <string id="upgrade name">BirdSmokeSteal</string>
+                                                        </action>
+                                                    </normal>
+                                                </condition>
+                                            </normal>
+                                            <else>
+                                                <condition id="isUpgradeEnabled">
+                                                    <string id="condition" values="yesno">no</string>
+                                                    <string id="upgrade name">BirdDive</string>
+                                                    <normal>
+                                                        <condition id="canPayUpgrade">
+                                                            <string id="upgrade name">BirdDive</string>
+                                                            <normal>
+                                                                <action id="buyUpgrade">
+                                                                    <string id="upgrade name">BirdDive</string>
+                                                                </action>
+                                                            </normal>
+                                                        </condition>
+                                                    </normal>
+                                                    <else>
+                                                        <condition id="isUpgradeEnabled">
+                                                            <string id="condition" values="yesno">no</string>
+                                                            <string id="upgrade name">PassiveBirdCoinHeal</string>
+                                                            <normal>
+                                                                <condition id="checkCharacterValue">
+                                                                    <string id="property" values="charactervaluesCheckable">gold</string>
+                                                                    <float id="value">100.00</float>
+                                                                    <string id="compare method" values="valuecompare">greater or equal</string>
+                                                                    <string id="check on" values="targetself">self</string>
+                                                                    <normal>
+                                                                        <action id="adjustCharacterValue">
+                                                                            <string id="property" values="charactervaluesAdjustable">gold</string>
+                                                                            <float id="value">-100.00</float>
+                                                                            <string id="adjust method" values="valueadjust">add</string>
+                                                                        </action>
+                                                                        <action id="enableUpgrade">
+                                                                            <string id="condition" values="yesno">yes</string>
+                                                                            <string id="upgrade name">PassiveBirdCoinHeal</string>
+                                                                        </action>
+                                                                    </normal>
+                                                                </condition>
+                                                            </normal>
+                                                            <else>
+                                                                <condition id="isUpgradeEnabled">
+                                                                    <string id="condition" values="yesno">no</string>
+                                                                    <string id="upgrade name">BirdSpeed</string>
+                                                                    <normal>
+                                                                        <condition id="canPayUpgrade">
+                                                                            <string id="upgrade name">BirdSpeed</string>
+                                                                            <normal>
+                                                                                <action id="buyUpgrade">
+                                                                                    <string id="upgrade name">BirdSpeed</string>
+                                                                                </action>
+                                                                            </normal>
+                                                                        </condition>
+                                                                    </normal>
+                                                                    <else>
+                                                                        <condition id="isUpgradeEnabled">
+                                                                            <string id="condition" values="yesno">no</string>
+                                                                            <string id="upgrade name">BirdDiveDamage</string>
+                                                                            <normal>
+                                                                                <condition id="canPayUpgrade">
+                                                                                    <string id="upgrade name">BirdDiveDamage</string>
+                                                                                    <normal>
+                                                                                        <action id="buyUpgrade">
+                                                                                            <string id="upgrade name">BirdDiveDamage</string>
+                                                                                        </action>
+                                                                                    </normal>
+                                                                                </condition>
+                                                                            </normal>
+                                                                            <else>
+                                                                                <condition id="isUpgradeEnabled">
+                                                                                    <string id="condition" values="yesno">no</string>
+                                                                                    <string id="upgrade name">BirdDiveDamage2</string>
+                                                                                    <normal>
+                                                                                        <condition id="canPayUpgrade">
+                                                                                            <string id="upgrade name">BirdDiveDamage2</string>
+                                                                                            <normal>
+                                                                                                <action id="buyUpgrade">
+                                                                                                    <string id="upgrade name">BirdDiveDamage2</string>
+                                                                                                </action>
+                                                                                            </normal>
+                                                                                        </condition>
+                                                                                    </normal>
+                                                                                    <else>
+                                                                                        <condition id="isUpgradeEnabled">
+                                                                                            <string id="condition" values="yesno">no</string>
+                                                                                            <string id="upgrade name">BirdDiveGold</string>
+                                                                                            <normal>
+                                                                                                <condition id="canPayUpgrade">
+                                                                                                    <string id="upgrade name">BirdDiveGold</string>
+                                                                                                    <normal>
+                                                                                                        <action id="buyUpgrade">
+                                                                                                            <string id="upgrade name">BirdDiveGold</string>
+                                                                                                        </action>
+                                                                                                    </normal>
+                                                                                                </condition>
+                                                                                            </normal>
+                                                                                            <else>
+                                                                                                <condition id="isUpgradeEnabled">
+                                                                                                    <string id="condition" values="yesno">no</string>
+                                                                                                    <string id="upgrade name">BirdSmokeSpeed1</string>
+                                                                                                    <normal>
+                                                                                                        <condition id="canPayUpgrade">
+                                                                                                            <string id="upgrade name">BirdSmokeSpeed1</string>
+                                                                                                            <normal>
+                                                                                                                <action id="buyUpgrade">
+                                                                                                                    <string id="upgrade name">BirdSmokeSpeed1</string>
+                                                                                                                </action>
+                                                                                                            </normal>
+                                                                                                        </condition>
+                                                                                                    </normal>
+                                                                                                    <else>
+                                                                                                        <condition id="isUpgradeEnabled">
+                                                                                                            <string id="condition" values="yesno">no</string>
+                                                                                                            <string id="upgrade name">BirdShootFirstShot</string>
+                                                                                                            <normal>
+                                                                                                                <condition id="canPayUpgrade">
+                                                                                                                    <string id="upgrade name">BirdShootFirstShot</string>
+                                                                                                                    <normal>
+                                                                                                                        <action id="buyUpgrade">
+                                                                                                                            <string id="upgrade name">BirdShootFirstShot</string>
+                                                                                                                        </action>
+                                                                                                                    </normal>
+                                                                                                                </condition>
+                                                                                                            </normal>
+                                                                                                            <else>
+                                                                                                                <condition id="isUpgradeEnabled">
+                                                                                                                    <string id="condition" values="yesno">no</string>
+                                                                                                                    <string id="upgrade name">BirdDiveLifesteal</string>
+                                                                                                                    <normal>
+                                                                                                                        <condition id="canPayUpgrade">
+                                                                                                                            <string id="upgrade name">BirdDiveLifesteal</string>
+                                                                                                                            <normal>
+                                                                                                                                <action id="buyUpgrade">
+                                                                                                                                    <string id="upgrade name">BirdDiveLifesteal</string>
+                                                                                                                                </action>
+                                                                                                                            </normal>
+                                                                                                                        </condition>
+                                                                                                                    </normal>
+                                                                                                                    <else>
+                                                                                                                        <condition id="isUpgradeEnabled">
+                                                                                                                            <string id="condition" values="yesno">no</string>
+                                                                                                                            <string id="upgrade name">BirdShootDamageGold</string>
+                                                                                                                            <normal>
+                                                                                                                                <condition id="canPayUpgrade">
+                                                                                                                                    <string id="upgrade name">BirdShootDamageGold</string>
+                                                                                                                                    <normal>
+                                                                                                                                        <action id="buyUpgrade">
+                                                                                                                                            <string id="upgrade name">BirdShootDamageGold</string>
+                                                                                                                                        </action>
+                                                                                                                                    </normal>
+                                                                                                                                </condition>
+                                                                                                                            </normal>
+                                                                                                                            <else>
+                                                                                                                                <condition id="isUpgradeEnabled">
+                                                                                                                                    <string id="condition" values="yesno">no</string>
+                                                                                                                                    <string id="upgrade name">BirdShootRange1</string>
+                                                                                                                                    <normal>
+                                                                                                                                        <condition id="canPayUpgrade">
+                                                                                                                                            <string id="upgrade name">BirdShootRange1</string>
+                                                                                                                                            <normal>
+                                                                                                                                                <action id="buyUpgrade">
+                                                                                                                                                    <string id="upgrade name">BirdShootRange1</string>
+                                                                                                                                                </action>
+                                                                                                                                            </normal>
+                                                                                                                                        </condition>
+                                                                                                                                    </normal>
+                                                                                                                                    <else>
+                                                                                                                                        <condition id="isUpgradeEnabled">
+                                                                                                                                            <string id="condition" values="yesno">no</string>
+                                                                                                                                            <string id="upgrade name">BirdSmokeSilence</string>
+                                                                                                                                            <normal>
+                                                                                                                                                <condition id="canPayUpgrade">
+                                                                                                                                                    <string id="upgrade name">BirdSmokeSilence</string>
+                                                                                                                                                    <normal>
+                                                                                                                                                        <action id="buyUpgrade">
+                                                                                                                                                            <string id="upgrade name">BirdSmokeSilence</string>
+                                                                                                                                                        </action>
+                                                                                                                                                    </normal>
+                                                                                                                                                </condition>
+                                                                                                                                            </normal>
+                                                                                                                                        </condition>
+                                                                                                                                    </else>
+                                                                                                                                </condition>
+                                                                                                                            </else>
+                                                                                                                        </condition>
+                                                                                                                    </else>
+                                                                                                                </condition>
+                                                                                                            </else>
+                                                                                                        </condition>
+                                                                                                    </else>
+                                                                                                </condition>
+                                                                                            </else>
+                                                                                        </condition>
+                                                                                    </else>
+                                                                                </condition>
+                                                                            </else>
+                                                                        </condition>
+                                                                    </else>
+                                                                </condition>
+                                                            </else>
+                                                        </condition>
+                                                    </else>
+                                                </condition>
+                                            </else>
+                                        </condition>
+                                    </else>
+                                </condition>
+                            </else>
+                        </condition>
+                    </normal>
+                </condition>
+            </normal>
+        </root>
+    </behaviour>
+</enemy>
