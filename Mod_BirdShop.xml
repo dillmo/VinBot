@@ -67,22 +67,13 @@
                                                     <else>
                                                         <condition id="isUpgradeEnabled">
                                                             <string id="condition" values="yesno">no</string>
-                                                            <string id="upgrade name">PassiveBirdCoinHeal</string>
+                                                            <string id="upgrade name">PassiveCoinHeal</string>
                                                             <normal>
-                                                                <condition id="checkCharacterValue">
-                                                                    <string id="property" values="charactervaluesCheckable">gold</string>
-                                                                    <float id="value">100.00</float>
-                                                                    <string id="compare method" values="valuecompare">greater or equal</string>
-                                                                    <string id="check on" values="targetself">self</string>
+                                                                <condition id="canPayUpgrade">
+                                                                    <string id="upgrade name">PassiveCoinHeal</string>
                                                                     <normal>
-                                                                        <action id="adjustCharacterValue">
-                                                                            <string id="property" values="charactervaluesAdjustable">gold</string>
-                                                                            <float id="value">-100.00</float>
-                                                                            <string id="adjust method" values="valueadjust">add</string>
-                                                                        </action>
-                                                                        <action id="enableUpgrade">
-                                                                            <string id="condition" values="yesno">yes</string>
-                                                                            <string id="upgrade name">PassiveBirdCoinHeal</string>
+                                                                        <action id="buyUpgrade">
+                                                                            <string id="upgrade name">PassiveCoinHeal</string>
                                                                         </action>
                                                                     </normal>
                                                                 </condition>
@@ -216,13 +207,13 @@
                                                                                                                                     <else>
                                                                                                                                         <condition id="isUpgradeEnabled">
                                                                                                                                             <string id="condition" values="yesno">no</string>
-                                                                                                                                            <string id="upgrade name">BirdSmokeSilence</string>
+                                                                                                                                            <string id="upgrade name">BirdSmokeStealth1</string>
                                                                                                                                             <normal>
                                                                                                                                                 <condition id="canPayUpgrade">
-                                                                                                                                                    <string id="upgrade name">BirdSmokeSilence</string>
+                                                                                                                                                    <string id="upgrade name">BirdSmokeStealth1</string>
                                                                                                                                                     <normal>
                                                                                                                                                         <action id="buyUpgrade">
-                                                                                                                                                            <string id="upgrade name">BirdSmokeSilence</string>
+                                                                                                                                                            <string id="upgrade name">BirdSmokeStealth1</string>
                                                                                                                                                         </action>
                                                                                                                                                     </normal>
                                                                                                                                                 </condition>
