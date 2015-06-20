@@ -11,13 +11,13 @@
                     <normal>
                         <condition id="isUpgradeEnabled">
                             <string id="condition" values="yesno">no</string>
-                            <string id="upgrade name">PiggyBank</string>
+                            <string id="upgrade name">BirdDive</string>
                             <normal>
                                 <condition id="canPayUpgrade">
-                                    <string id="upgrade name">PiggyBank</string>
+                                    <string id="upgrade name">BirdDive</string>
                                     <normal>
                                         <action id="buyUpgrade">
-                                            <string id="upgrade name">PiggyBank</string>
+                                            <string id="upgrade name">BirdDive</string>
                                         </action>
                                     </normal>
                                 </condition>
@@ -53,13 +53,13 @@
                                             <else>
                                                 <condition id="isUpgradeEnabled">
                                                     <string id="condition" values="yesno">no</string>
-                                                    <string id="upgrade name">BirdDive</string>
+                                                    <string id="upgrade name">PassiveCoinHeal</string>
                                                     <normal>
                                                         <condition id="canPayUpgrade">
-                                                            <string id="upgrade name">BirdDive</string>
+                                                            <string id="upgrade name">PassiveCoinHeal</string>
                                                             <normal>
                                                                 <action id="buyUpgrade">
-                                                                    <string id="upgrade name">BirdDive</string>
+                                                                    <string id="upgrade name">PassiveCoinHeal</string>
                                                                 </action>
                                                             </normal>
                                                         </condition>
@@ -67,13 +67,13 @@
                                                     <else>
                                                         <condition id="isUpgradeEnabled">
                                                             <string id="condition" values="yesno">no</string>
-                                                            <string id="upgrade name">PassiveCoinHeal</string>
+                                                            <string id="upgrade name">BirdDiveLifesteal</string>
                                                             <normal>
                                                                 <condition id="canPayUpgrade">
-                                                                    <string id="upgrade name">PassiveCoinHeal</string>
+                                                                    <string id="upgrade name">BirdDiveLifesteal</string>
                                                                     <normal>
                                                                         <action id="buyUpgrade">
-                                                                            <string id="upgrade name">PassiveCoinHeal</string>
+                                                                            <string id="upgrade name">BirdDiveLifesteal</string>
                                                                         </action>
                                                                     </normal>
                                                                 </condition>
@@ -81,13 +81,13 @@
                                                             <else>
                                                                 <condition id="isUpgradeEnabled">
                                                                     <string id="condition" values="yesno">no</string>
-                                                                    <string id="upgrade name">BirdSpeed</string>
+                                                                    <string id="upgrade name">BirdDiveDamage</string>
                                                                     <normal>
                                                                         <condition id="canPayUpgrade">
-                                                                            <string id="upgrade name">BirdSpeed</string>
+                                                                            <string id="upgrade name">BirdDiveDamage</string>
                                                                             <normal>
                                                                                 <action id="buyUpgrade">
-                                                                                    <string id="upgrade name">BirdSpeed</string>
+                                                                                    <string id="upgrade name">BirdDiveDamage</string>
                                                                                 </action>
                                                                             </normal>
                                                                         </condition>
@@ -95,13 +95,13 @@
                                                                     <else>
                                                                         <condition id="isUpgradeEnabled">
                                                                             <string id="condition" values="yesno">no</string>
-                                                                            <string id="upgrade name">BirdDiveDamage</string>
+                                                                            <string id="upgrade name">BirdDiveDamage2</string>
                                                                             <normal>
                                                                                 <condition id="canPayUpgrade">
-                                                                                    <string id="upgrade name">BirdDiveDamage</string>
+                                                                                    <string id="upgrade name">BirdDiveDamage2</string>
                                                                                     <normal>
                                                                                         <action id="buyUpgrade">
-                                                                                            <string id="upgrade name">BirdDiveDamage</string>
+                                                                                            <string id="upgrade name">BirdDiveDamage2</string>
                                                                                         </action>
                                                                                     </normal>
                                                                                 </condition>
@@ -109,13 +109,13 @@
                                                                             <else>
                                                                                 <condition id="isUpgradeEnabled">
                                                                                     <string id="condition" values="yesno">no</string>
-                                                                                    <string id="upgrade name">BirdDiveDamage2</string>
+                                                                                    <string id="upgrade name">BirdDiveGold</string>
                                                                                     <normal>
                                                                                         <condition id="canPayUpgrade">
-                                                                                            <string id="upgrade name">BirdDiveDamage2</string>
+                                                                                            <string id="upgrade name">BirdDiveGold</string>
                                                                                             <normal>
                                                                                                 <action id="buyUpgrade">
-                                                                                                    <string id="upgrade name">BirdDiveDamage2</string>
+                                                                                                    <string id="upgrade name">BirdDiveGold</string>
                                                                                                 </action>
                                                                                             </normal>
                                                                                         </condition>
@@ -123,13 +123,13 @@
                                                                                     <else>
                                                                                         <condition id="isUpgradeEnabled">
                                                                                             <string id="condition" values="yesno">no</string>
-                                                                                            <string id="upgrade name">BirdDiveGold</string>
+                                                                                            <string id="upgrade name">BirdShootFirstShot</string>
                                                                                             <normal>
                                                                                                 <condition id="canPayUpgrade">
-                                                                                                    <string id="upgrade name">BirdDiveGold</string>
+                                                                                                    <string id="upgrade name">BirdShootFirstShot</string>
                                                                                                     <normal>
                                                                                                         <action id="buyUpgrade">
-                                                                                                            <string id="upgrade name">BirdDiveGold</string>
+                                                                                                            <string id="upgrade name">BirdShootFirstShot</string>
                                                                                                         </action>
                                                                                                     </normal>
                                                                                                 </condition>
@@ -137,13 +137,13 @@
                                                                                             <else>
                                                                                                 <condition id="isUpgradeEnabled">
                                                                                                     <string id="condition" values="yesno">no</string>
-                                                                                                    <string id="upgrade name">BirdSmokeSpeed1</string>
+                                                                                                    <string id="upgrade name">BirdSpeed</string>
                                                                                                     <normal>
                                                                                                         <condition id="canPayUpgrade">
-                                                                                                            <string id="upgrade name">BirdSmokeSpeed1</string>
+                                                                                                            <string id="upgrade name">BirdSpeed</string>
                                                                                                             <normal>
                                                                                                                 <action id="buyUpgrade">
-                                                                                                                    <string id="upgrade name">BirdSmokeSpeed1</string>
+                                                                                                                    <string id="upgrade name">BirdSpeed</string>
                                                                                                                 </action>
                                                                                                             </normal>
                                                                                                         </condition>
@@ -151,13 +151,13 @@
                                                                                                     <else>
                                                                                                         <condition id="isUpgradeEnabled">
                                                                                                             <string id="condition" values="yesno">no</string>
-                                                                                                            <string id="upgrade name">BirdShootFirstShot</string>
+                                                                                                            <string id="upgrade name">BirdSmokeSilence</string>
                                                                                                             <normal>
                                                                                                                 <condition id="canPayUpgrade">
-                                                                                                                    <string id="upgrade name">BirdShootFirstShot</string>
+                                                                                                                    <string id="upgrade name">BirdSmokeSilence</string>
                                                                                                                     <normal>
                                                                                                                         <action id="buyUpgrade">
-                                                                                                                            <string id="upgrade name">BirdShootFirstShot</string>
+                                                                                                                            <string id="upgrade name">BirdSmokeSilence</string>
                                                                                                                         </action>
                                                                                                                     </normal>
                                                                                                                 </condition>
@@ -165,13 +165,13 @@
                                                                                                             <else>
                                                                                                                 <condition id="isUpgradeEnabled">
                                                                                                                     <string id="condition" values="yesno">no</string>
-                                                                                                                    <string id="upgrade name">BirdDiveLifesteal</string>
+                                                                                                                    <string id="upgrade name">BirdSmokeSize1</string>
                                                                                                                     <normal>
                                                                                                                         <condition id="canPayUpgrade">
-                                                                                                                            <string id="upgrade name">BirdDiveLifesteal</string>
+                                                                                                                            <string id="upgrade name">BirdSmokeSize1</string>
                                                                                                                             <normal>
                                                                                                                                 <action id="buyUpgrade">
-                                                                                                                                    <string id="upgrade name">BirdDiveLifesteal</string>
+                                                                                                                                    <string id="upgrade name">BirdSmokeSize1</string>
                                                                                                                                 </action>
                                                                                                                             </normal>
                                                                                                                         </condition>
@@ -179,13 +179,13 @@
                                                                                                                     <else>
                                                                                                                         <condition id="isUpgradeEnabled">
                                                                                                                             <string id="condition" values="yesno">no</string>
-                                                                                                                            <string id="upgrade name">BirdShootDamageGold</string>
+                                                                                                                            <string id="upgrade name">addHealth1</string>
                                                                                                                             <normal>
                                                                                                                                 <condition id="canPayUpgrade">
-                                                                                                                                    <string id="upgrade name">BirdShootDamageGold</string>
+                                                                                                                                    <string id="upgrade name">addHealth1</string>
                                                                                                                                     <normal>
                                                                                                                                         <action id="buyUpgrade">
-                                                                                                                                            <string id="upgrade name">BirdShootDamageGold</string>
+                                                                                                                                            <string id="upgrade name">addHealth1</string>
                                                                                                                                         </action>
                                                                                                                                     </normal>
                                                                                                                                 </condition>
@@ -193,13 +193,13 @@
                                                                                                                             <else>
                                                                                                                                 <condition id="isUpgradeEnabled">
                                                                                                                                     <string id="condition" values="yesno">no</string>
-                                                                                                                                    <string id="upgrade name">BirdShootRange1</string>
+                                                                                                                                    <string id="upgrade name">addHealth2</string>
                                                                                                                                     <normal>
                                                                                                                                         <condition id="canPayUpgrade">
-                                                                                                                                            <string id="upgrade name">BirdShootRange1</string>
+                                                                                                                                            <string id="upgrade name">addHealth2</string>
                                                                                                                                             <normal>
                                                                                                                                                 <action id="buyUpgrade">
-                                                                                                                                                    <string id="upgrade name">BirdShootRange1</string>
+                                                                                                                                                    <string id="upgrade name">addHealth2</string>
                                                                                                                                                 </action>
                                                                                                                                             </normal>
                                                                                                                                         </condition>
@@ -207,17 +207,97 @@
                                                                                                                                     <else>
                                                                                                                                         <condition id="isUpgradeEnabled">
                                                                                                                                             <string id="condition" values="yesno">no</string>
-                                                                                                                                            <string id="upgrade name">BirdSmokeStealth1</string>
+                                                                                                                                            <string id="upgrade name">addHealth3</string>
                                                                                                                                             <normal>
                                                                                                                                                 <condition id="canPayUpgrade">
-                                                                                                                                                    <string id="upgrade name">BirdSmokeStealth1</string>
+                                                                                                                                                    <string id="upgrade name">addHealth3</string>
                                                                                                                                                     <normal>
                                                                                                                                                         <action id="buyUpgrade">
-                                                                                                                                                            <string id="upgrade name">BirdSmokeStealth1</string>
+                                                                                                                                                            <string id="upgrade name">addHealth3</string>
                                                                                                                                                         </action>
                                                                                                                                                     </normal>
                                                                                                                                                 </condition>
                                                                                                                                             </normal>
+                                                                                                                                            <else>
+                                                                                                                                                <condition id="isUpgradeEnabled">
+                                                                                                                                                    <string id="condition" values="yesno">no</string>
+                                                                                                                                                    <string id="upgrade name">BirdShootDamage1</string>
+                                                                                                                                                    <normal>
+                                                                                                                                                        <condition id="canPayUpgrade">
+                                                                                                                                                            <string id="upgrade name">BirdShootDamage1</string>
+                                                                                                                                                            <normal>
+                                                                                                                                                                <action id="buyUpgrade">
+                                                                                                                                                                    <string id="upgrade name">BirdShootDamage1</string>
+                                                                                                                                                                </action>
+                                                                                                                                                            </normal>
+                                                                                                                                                        </condition>
+                                                                                                                                                    </normal>
+                                                                                                                                                    <else>
+                                                                                                                                                        <condition id="isUpgradeEnabled">
+                                                                                                                                                            <string id="condition" values="yesno">no</string>
+                                                                                                                                                            <string id="upgrade name">BirdShootDamage2</string>
+                                                                                                                                                            <normal>
+                                                                                                                                                                <condition id="canPayUpgrade">
+                                                                                                                                                                    <string id="upgrade name">BirdShootDamage2</string>
+                                                                                                                                                                    <normal>
+                                                                                                                                                                        <action id="buyUpgrade">
+                                                                                                                                                                            <string id="upgrade name">BirdShootDamage2</string>
+                                                                                                                                                                        </action>
+                                                                                                                                                                    </normal>
+                                                                                                                                                                </condition>
+                                                                                                                                                            </normal>
+                                                                                                                                                            <else>
+                                                                                                                                                                <condition id="isUpgradeEnabled">
+                                                                                                                                                                    <string id="condition" values="yesno">no</string>
+                                                                                                                                                                    <string id="upgrade name">undefined</string>
+                                                                                                                                                                    <normal>
+                                                                                                                                                                        <condition id="canPayUpgrade">
+                                                                                                                                                                            <string id="upgrade name">undefined</string>
+                                                                                                                                                                            <normal>
+                                                                                                                                                                                <action id="buyUpgrade">
+                                                                                                                                                                                    <string id="upgrade name">undefined</string>
+                                                                                                                                                                                </action>
+                                                                                                                                                                            </normal>
+                                                                                                                                                                        </condition>
+                                                                                                                                                                    </normal>
+                                                                                                                                                                    <else>
+                                                                                                                                                                        <condition id="isUpgradeEnabled">
+                                                                                                                                                                            <string id="condition" values="yesno">no</string>
+                                                                                                                                                                            <string id="upgrade name">BirdShootAttackSpeed1</string>
+                                                                                                                                                                            <normal>
+                                                                                                                                                                                <condition id="canPayUpgrade">
+                                                                                                                                                                                    <string id="upgrade name">BirdShootAttackSpeed1</string>
+                                                                                                                                                                                    <normal>
+                                                                                                                                                                                        <action id="buyUpgrade">
+                                                                                                                                                                                            <string id="upgrade name">BirdShootAttackSpeed1</string>
+                                                                                                                                                                                        </action>
+                                                                                                                                                                                    </normal>
+                                                                                                                                                                                </condition>
+                                                                                                                                                                            </normal>
+                                                                                                                                                                            <else>
+                                                                                                                                                                                <condition id="isUpgradeEnabled">
+                                                                                                                                                                                    <string id="condition" values="yesno">no</string>
+                                                                                                                                                                                    <string id="upgrade name">BirdShootAttackSpeed2</string>
+                                                                                                                                                                                    <normal>
+                                                                                                                                                                                        <condition id="canPayUpgrade">
+                                                                                                                                                                                            <string id="upgrade name">BirdShootAttackSpeed2</string>
+                                                                                                                                                                                            <normal>
+                                                                                                                                                                                                <action id="buyUpgrade">
+                                                                                                                                                                                                    <string id="upgrade name">BirdShootAttackSpeed2</string>
+                                                                                                                                                                                                </action>
+                                                                                                                                                                                            </normal>
+                                                                                                                                                                                        </condition>
+                                                                                                                                                                                    </normal>
+                                                                                                                                                                                </condition>
+                                                                                                                                                                            </else>
+                                                                                                                                                                        </condition>
+                                                                                                                                                                    </else>
+                                                                                                                                                                </condition>
+                                                                                                                                                            </else>
+                                                                                                                                                        </condition>
+                                                                                                                                                    </else>
+                                                                                                                                                </condition>
+                                                                                                                                            </else>
                                                                                                                                         </condition>
                                                                                                                                     </else>
                                                                                                                                 </condition>
