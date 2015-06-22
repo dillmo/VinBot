@@ -663,50 +663,57 @@
                                         <orblock>
                                             <string id="Comment">Am I in grave danger?</string>
                                             <normal>
-                                                <condition id="getBoolEquals">
-                                                    <string id="id">RetreatingFromNauts</string>
-                                                    <string id="value" values="yesno">yes</string>
-                                                    <string id="Comment">Also dive from target if retreating</string>
-                                                    <normal>
-                                                        <andblock>
-                                                            <string id="Comment">Don&apos;t dive in the wrong direction</string>
-                                                            <normal>
-                                                                <action id="pressButton">
-                                                                    <string id="button" values="buttons">FACE_RIGHT</string>
-                                                                    <float id="duration in seconds">0.00</float>
-                                                                    <string id="Comment">Dive!</string>
-                                                                </action>
-                                                            </normal>
-                                                            <or>
-                                                                <condition id="isTargetPosition">
-                                                                    <string id="condition" values="yesno">yes</string>
-                                                                    <string id="target position" values="offsetposition">back</string>
-                                                                </condition>
-                                                                <condition id="directionToEnemyBase">
-                                                                    <string id="direction" values="forwardbackward">BACKWARD</string>
-                                                                </condition>
-                                                            </or>
-                                                        </andblock>
-                                                    </normal>
+                                                <condition id="isInNamedArea">
+                                                    <string id="area name">healArea</string>
+                                                    <string id="team" values="ownenemy">OWN_TEAM</string>
+                                                    <string id="who" values="targetself">self</string>
                                                     <else>
-                                                        <andblock>
-                                                            <string id="Comment">Don&apos;t dive in the wrong direction</string>
+                                                        <condition id="getBoolEquals">
+                                                            <string id="id">RetreatingFromNauts</string>
+                                                            <string id="value" values="yesno">yes</string>
+                                                            <string id="Comment">Also dive from target if retreating</string>
                                                             <normal>
-                                                                <action id="pressButton">
-                                                                    <string id="button" values="buttons">FACE_RIGHT</string>
-                                                                    <float id="duration in seconds">0.00</float>
-                                                                    <string id="Comment">Dive!</string>
-                                                                </action>
+                                                                <andblock>
+                                                                    <string id="Comment">Don&apos;t dive in the wrong direction</string>
+                                                                    <normal>
+                                                                        <action id="pressButton">
+                                                                            <string id="button" values="buttons">FACE_RIGHT</string>
+                                                                            <float id="duration in seconds">0.00</float>
+                                                                            <string id="Comment">Dive!</string>
+                                                                        </action>
+                                                                    </normal>
+                                                                    <or>
+                                                                        <condition id="isTargetPosition">
+                                                                            <string id="condition" values="yesno">yes</string>
+                                                                            <string id="target position" values="offsetposition">back</string>
+                                                                        </condition>
+                                                                        <condition id="directionToEnemyBase">
+                                                                            <string id="direction" values="forwardbackward">BACKWARD</string>
+                                                                        </condition>
+                                                                    </or>
+                                                                </andblock>
                                                             </normal>
-                                                            <or>
-                                                                <condition id="directionToEnemyBase">
-                                                                    <string id="direction" values="forwardbackward">BACKWARD</string>
-                                                                </condition>
-                                                                <condition id="isNextWaypointPosition">
-                                                                    <string id="position" values="offsetposition">FRONT</string>
-                                                                </condition>
-                                                            </or>
-                                                        </andblock>
+                                                            <else>
+                                                                <andblock>
+                                                                    <string id="Comment">Don&apos;t dive in the wrong direction</string>
+                                                                    <normal>
+                                                                        <action id="pressButton">
+                                                                            <string id="button" values="buttons">FACE_RIGHT</string>
+                                                                            <float id="duration in seconds">0.00</float>
+                                                                            <string id="Comment">Dive!</string>
+                                                                        </action>
+                                                                    </normal>
+                                                                    <or>
+                                                                        <condition id="directionToEnemyBase">
+                                                                            <string id="direction" values="forwardbackward">BACKWARD</string>
+                                                                        </condition>
+                                                                        <condition id="isNextWaypointPosition">
+                                                                            <string id="position" values="offsetposition">FRONT</string>
+                                                                        </condition>
+                                                                    </or>
+                                                                </andblock>
+                                                            </else>
+                                                        </condition>
                                                     </else>
                                                 </condition>
                                             </normal>
@@ -754,6 +761,9 @@
                                                     <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;</string>
                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
                                                     <string id="class"></string>
+                                                    <string id="only check parent" values="yesno">no</string>
+                                                    <string id="only check children" values="yesno">no</string>
+                                                    <string id="count characters out of combat" values="yesno">yes</string>
                                                     <string id="condition" values="charactervaluesCheckable">health minus dot percentage</string>
                                                     <string id="comparison" values="valuecompare">greater or equal</string>
                                                     <float id="value">30.00</float>
@@ -769,6 +779,9 @@
                                                             <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;</string>
                                                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                                             <string id="class"></string>
+                                                            <string id="only check parent" values="yesno">no</string>
+                                                            <string id="only check children" values="yesno">no</string>
+                                                            <string id="count characters out of combat" values="yesno">yes</string>
                                                             <string id="condition" values="charactervaluesCheckable">health minus dot percentage</string>
                                                             <string id="comparison" values="valuecompare">greater</string>
                                                             <float id="value">30.00</float>
@@ -800,6 +813,9 @@
                                                             <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;</string>
                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
                                                             <string id="class"></string>
+                                                            <string id="only check parent" values="yesno">no</string>
+                                                            <string id="only check children" values="yesno">no</string>
+                                                            <string id="count characters out of combat" values="yesno">yes</string>
                                                             <string id="condition" values="charactervaluesCheckable">health minus dot percentage</string>
                                                             <string id="comparison" values="valuecompare">greater or equal</string>
                                                             <float id="value">30.00</float>
@@ -814,6 +830,9 @@
                                                                     <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;</string>
                                                                     <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                                                     <string id="class"></string>
+                                                                    <string id="only check parent" values="yesno">no</string>
+                                                                    <string id="only check children" values="yesno">no</string>
+                                                                    <string id="count characters out of combat" values="yesno">yes</string>
                                                                     <string id="condition" values="charactervaluesCheckable">health minus dot percentage</string>
                                                                     <string id="comparison" values="valuecompare">greater</string>
                                                                     <float id="value">30.00</float>
@@ -970,6 +989,7 @@
                                                     <string id="condition" values="yesno">yes</string>
                                                     <string id="collision groups" values="collison groups" multiselect="true">CREEPS;;</string>
                                                     <string id="check green obstacles only" values="yesno">no</string>
+                                                    <string id="count characters out of combat" values="yesno">yes</string>
                                                     <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                                     <string id="areaName"></string>
                                                     <float id="xOffset">0.00</float>
@@ -983,6 +1003,7 @@
                                                     <string id="condition" values="yesno">yes</string>
                                                     <string id="collision groups" values="collison groups" multiselect="true">CREEPS;;</string>
                                                     <string id="check green obstacles only" values="yesno">no</string>
+                                                    <string id="count characters out of combat" values="yesno">yes</string>
                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
                                                     <string id="areaName"></string>
                                                     <float id="xOffset">0.00</float>
@@ -1018,6 +1039,9 @@
                                     <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;CREEPS;;</string>
                                     <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                     <string id="class"></string>
+                                    <string id="only check parent" values="yesno">no</string>
+                                    <string id="only check children" values="yesno">no</string>
+                                    <string id="count characters out of combat" values="yesno">yes</string>
                                     <string id="condition" values="charactervaluesCheckable">health</string>
                                     <string id="comparison" values="valuecompare">greater or equal</string>
                                     <float id="value">0.00</float>
@@ -1231,6 +1255,9 @@
                             <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;</string>
                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
                             <string id="class"></string>
+                            <string id="only check parent" values="yesno">no</string>
+                            <string id="only check children" values="yesno">no</string>
+                            <string id="count characters out of combat" values="yesno">yes</string>
                             <string id="condition" values="charactervaluesCheckable">health minus dot percentage</string>
                             <string id="comparison" values="valuecompare">greater or equal</string>
                             <float id="value">30.00</float>
@@ -1250,6 +1277,7 @@
                                                     <string id="groups to select" values="target groups" multiselect="true">CREEPS;;</string>
                                                     <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                                     <string id="class"></string>
+                                                    <string id="only check parent" values="yesno">no</string>
                                                     <string id="remove if not found" values="yesno">no</string>
                                                     <float id="xOffset">0.00</float>
                                                     <float id="yOffset">0.00</float>
@@ -1307,6 +1335,9 @@
                                             <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;</string>
                                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                             <string id="class"></string>
+                                            <string id="only check parent" values="yesno">no</string>
+                                            <string id="only check children" values="yesno">no</string>
+                                            <string id="count characters out of combat" values="yesno">yes</string>
                                             <string id="condition" values="charactervaluesCheckable">health minus dot percentage</string>
                                             <string id="comparison" values="valuecompare">greater</string>
                                             <float id="value">30.00</float>
@@ -1333,6 +1364,7 @@
                                                     <string id="groups to select" values="target groups" multiselect="true">CREEPS;;</string>
                                                     <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                                     <string id="class"></string>
+                                                    <string id="only check parent" values="yesno">no</string>
                                                     <string id="remove if not found" values="yesno">no</string>
                                                     <float id="xOffset">0.00</float>
                                                     <float id="yOffset">0.00</float>
@@ -1390,6 +1422,9 @@
                                             <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;</string>
                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
                                             <string id="class"></string>
+                                            <string id="only check parent" values="yesno">no</string>
+                                            <string id="only check children" values="yesno">no</string>
+                                            <string id="count characters out of combat" values="yesno">yes</string>
                                             <string id="condition" values="charactervaluesCheckable">health minus dot percentage</string>
                                             <string id="comparison" values="valuecompare">greater or equal</string>
                                             <float id="value">30.00</float>
@@ -1404,6 +1439,9 @@
                                             <string id="groups" values="target receive groups" multiselect="true">PLAYERS;;</string>
                                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                             <string id="class"></string>
+                                            <string id="only check parent" values="yesno">no</string>
+                                            <string id="only check children" values="yesno">no</string>
+                                            <string id="count characters out of combat" values="yesno">yes</string>
                                             <string id="condition" values="charactervaluesCheckable">health minus dot percentage</string>
                                             <string id="comparison" values="valuecompare">greater</string>
                                             <float id="value">30.00</float>
@@ -1433,6 +1471,7 @@
                             <string id="condition" values="yesno">yes</string>
                             <string id="collision groups" values="collison groups" multiselect="true">PLAYERS;;</string>
                             <string id="check green obstacles only" values="yesno">no</string>
+                            <string id="count characters out of combat" values="yesno">yes</string>
                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                             <string id="areaName"></string>
                             <float id="xOffset">0.00</float>
@@ -1476,6 +1515,7 @@
                                             <string id="groups to select" values="target groups" multiselect="true">CREEPS;;</string>
                                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                             <string id="class"></string>
+                                            <string id="only check parent" values="yesno">no</string>
                                             <string id="remove if not found" values="yesno">no</string>
                                             <float id="xOffset">0.00</float>
                                             <float id="yOffset">0.00</float>
@@ -1586,6 +1626,7 @@
                             <string id="groups to select" values="target groups" multiselect="true">CREEPS;;</string>
                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
                             <string id="class">CreepCaptainChain</string>
+                            <string id="only check parent" values="yesno">no</string>
                             <string id="remove if not found" values="yesno">no</string>
                             <float id="xOffset">0.00</float>
                             <float id="yOffset">0.00</float>
@@ -1630,6 +1671,9 @@
                             <string id="groups" values="target receive groups" multiselect="true">CREEPS;;</string>
                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
                             <string id="class">CreepCaptainChain</string>
+                            <string id="only check parent" values="yesno">no</string>
+                            <string id="only check children" values="yesno">no</string>
+                            <string id="count characters out of combat" values="yesno">yes</string>
                             <string id="condition" values="charactervaluesCheckable">health</string>
                             <string id="comparison" values="valuecompare">greater or equal</string>
                             <float id="value">0.00</float>
@@ -1712,6 +1756,7 @@
                                                     <string id="condition" values="yesno">yes</string>
                                                     <string id="collision groups" values="collison groups" multiselect="true">PLAYERS;;CREEPS;;INVINCIBLE_OBSTACLES;;DESTROYABLE_OBSTACLES;;</string>
                                                     <string id="check green obstacles only" values="yesno">no</string>
+                                                    <string id="count characters out of combat" values="yesno">yes</string>
                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
                                                     <string id="areaName"></string>
                                                     <float id="xOffset">0.04</float>
@@ -1793,6 +1838,7 @@
                                                     <string id="condition" values="yesno">yes</string>
                                                     <string id="collision groups" values="collison groups" multiselect="true">INVINCIBLE_OBSTACLES;;</string>
                                                     <string id="check green obstacles only" values="yesno">yes</string>
+                                                    <string id="count characters out of combat" values="yesno">yes</string>
                                                     <string id="teams" values="teams" multiselect="true">OWN_TEAM;;ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
                                                     <string id="areaName"></string>
                                                     <float id="xOffset">0.00</float>
@@ -1850,6 +1896,7 @@
                                                             <string id="condition" values="yesno">yes</string>
                                                             <string id="collision groups" values="collison groups" multiselect="true">INVINCIBLE_OBSTACLES;;DESTROYABLE_OBSTACLES;;</string>
                                                             <string id="check green obstacles only" values="yesno">no</string>
+                                                            <string id="count characters out of combat" values="yesno">yes</string>
                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
                                                             <string id="areaName"></string>
                                                             <float id="xOffset">0.04</float>
@@ -1864,6 +1911,7 @@
                                                             <string id="condition" values="yesno">yes</string>
                                                             <string id="collision groups" values="collison groups" multiselect="true">CREEPS;;</string>
                                                             <string id="check green obstacles only" values="yesno">no</string>
+                                                            <string id="count characters out of combat" values="yesno">yes</string>
                                                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
                                                             <string id="areaName"></string>
                                                             <float id="xOffset">0.00</float>
@@ -1924,6 +1972,7 @@
                                     <string id="condition" values="yesno">yes</string>
                                     <string id="collision groups" values="collison groups" multiselect="true">PLAYERS;;</string>
                                     <string id="check green obstacles only" values="yesno">no</string>
+                                    <string id="count characters out of combat" values="yesno">yes</string>
                                     <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                     <string id="areaName"></string>
                                     <float id="xOffset">0.00</float>
@@ -1962,6 +2011,7 @@
                                             <string id="condition" values="yesno">yes</string>
                                             <string id="collision groups" values="collison groups" multiselect="true">PLAYERS;;</string>
                                             <string id="check green obstacles only" values="yesno">no</string>
+                                            <string id="count characters out of combat" values="yesno">yes</string>
                                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                             <string id="areaName"></string>
                                             <float id="xOffset">0.00</float>
@@ -2207,6 +2257,7 @@
                                                             <string id="condition" values="yesno">yes</string>
                                                             <string id="collision groups" values="collison groups" multiselect="true">PLAYERS;;</string>
                                                             <string id="check green obstacles only" values="yesno">no</string>
+                                                            <string id="count characters out of combat" values="yesno">yes</string>
                                                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                                             <string id="areaName"></string>
                                                             <float id="xOffset">-0.15</float>
@@ -2274,6 +2325,7 @@
                                                             <string id="condition" values="yesno">yes</string>
                                                             <string id="collision groups" values="collison groups" multiselect="true">PLAYERS;;</string>
                                                             <string id="check green obstacles only" values="yesno">no</string>
+                                                            <string id="count characters out of combat" values="yesno">yes</string>
                                                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;</string>
                                                             <string id="areaName"></string>
                                                             <float id="xOffset">0.15</float>
@@ -2323,6 +2375,7 @@
                                                                             <string id="condition" values="yesno">yes</string>
                                                                             <string id="collision groups" values="collison groups" multiselect="true">INVINCIBLE_OBSTACLES;;DESTROYABLE_OBSTACLES;;</string>
                                                                             <string id="check green obstacles only" values="yesno">no</string>
+                                                                            <string id="count characters out of combat" values="yesno">yes</string>
                                                                             <string id="teams" values="teams" multiselect="true">OWN_TEAM;;ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
                                                                             <string id="areaName"></string>
                                                                             <float id="xOffset">0.04</float>
@@ -2354,6 +2407,7 @@
                                                                             <string id="condition" values="yesno">yes</string>
                                                                             <string id="collision groups" values="collison groups" multiselect="true">PLAYERS;;CREEPS;;</string>
                                                                             <string id="check green obstacles only" values="yesno">no</string>
+                                                                            <string id="count characters out of combat" values="yesno">yes</string>
                                                                             <string id="teams" values="teams" multiselect="true">ENEMY_TEAM;;NEUTRAL_TEAM;;</string>
                                                                             <string id="areaName"></string>
                                                                             <float id="xOffset">0.00</float>
