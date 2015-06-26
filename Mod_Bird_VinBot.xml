@@ -1686,6 +1686,75 @@
                         </condition>
                     </or>
                 </andblock>
+                <andblock>
+                    <string id="Comment">Heal from healbots</string>
+                    <normal>
+                        <action id="selectTarget">
+                            <string id="groups to select" values="target groups" multiselect="true">CREEPS;;</string>
+                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="class">CreepSummonerHealtotem</string>
+                            <string id="only check parent" values="yesno">no</string>
+                            <string id="remove if not found" values="yesno">no</string>
+                            <float id="xOffset">0.00</float>
+                            <float id="yOffset">0.00</float>
+                            <float id="width">1.00</float>
+                            <float id="height">1.00</float>
+                            <string id="compare method" values="valuecompare2">greater or equal</string>
+                            <float id="health value">0.00</float>
+                            <string id="distance check" values="distance check">NONE</string>
+                            <string id="check line of sight" values="yesno">no</string>
+                            <string id="ignore invisibility" values="yesno">no</string>
+                        </action>
+                        <action id="aimStickAtTarget">
+                            <float id="duration seconds">0.10</float>
+                            <string id="only aim when needed" values="yesno">no</string>
+                            <string id="use rotation speed limits" values="yesno">no</string>
+                            <float id="min rotation speed per second in degrees">0.00</float>
+                            <float id="max rotation speed per second in degrees">0.00</float>
+                            <float id="use min rotation speed when angle to target under">0.00</float>
+                            <float id="use max rotation speed when angle to target over">0.00</float>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">MoveTowardsTarget</string>
+                            <string id="value" values="flagtoggle">yes</string>
+                        </action>
+                        <action id="setBool">
+                            <string id="id">MoveAwayFromTarget</string>
+                            <string id="value" values="flagtoggle">no</string>
+                        </action>
+                    </normal>
+                    <or>
+                        <condition id="isCharacterInArea">
+                            <string id="groups" values="target receive groups" multiselect="true">CREEPS;;</string>
+                            <string id="teams" values="teams" multiselect="true">OWN_TEAM;;</string>
+                            <string id="class">CreepSummonerHealtotem</string>
+                            <string id="only check parent" values="yesno">no</string>
+                            <string id="only check children" values="yesno">no</string>
+                            <string id="count characters out of combat" values="yesno">yes</string>
+                            <string id="condition" values="charactervaluesCheckable">health</string>
+                            <string id="comparison" values="valuecompare">greater or equal</string>
+                            <float id="value">0.00</float>
+                            <string id="character minimum"></string>
+                            <float id="xOffset">0.00</float>
+                            <float id="yOffset">0.00</float>
+                            <float id="width">1.00</float>
+                            <float id="height">1.00</float>
+                            <string id="check line of sight" values="yesno">no</string>
+                        </condition>
+                        <condition id="checkCharacterValue">
+                            <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                            <float id="value">50.00</float>
+                            <string id="compare method" values="valuecompare">greater</string>
+                            <string id="check on" values="targetself">target</string>
+                        </condition>
+                        <condition id="checkCharacterValue">
+                            <string id="property" values="charactervaluesCheckable">health minus dot percentage</string>
+                            <float id="value">100.00</float>
+                            <string id="compare method" values="valuecompare">less</string>
+                            <string id="check on" values="targetself">self</string>
+                        </condition>
+                    </or>
+                </andblock>
                 <condition id="getBoolEquals">
                     <string id="id">MoveAwayFromTarget</string>
                     <string id="value" values="yesno">yes</string>
